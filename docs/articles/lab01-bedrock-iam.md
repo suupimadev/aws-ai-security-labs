@@ -1,6 +1,5 @@
 <!--
 Qiita 下書き（未公開）。公開前チェックリスト:
- - [ ] GitHub リポジトリ公開後に URL を差し替え（承認後。5章の git clone と14章の2か所）
  - [ ] 構成図を draw.io から PNG で書き出し、Qiita にアップロードして画像パスを差し替え
  - [ ] 東京の Nova Micro 単価を料金ページで確認して「費用」を更新
  - [ ] 請求データ（Cost Explorer）で実額と、拒否呼び出しの課金有無を確認
@@ -52,9 +51,8 @@ Qiita 下書き（未公開）。公開前チェックリスト:
 
 前提: Terraform 1.6 以上、AWS CLI v2、Python 3.12 以上、IAM ロールの作成と Bedrock の呼び出しができる AWS 権限（今回は AdministratorAccess の SSO ロール）。**検証用のアカウントで実施してください。**
 
-<!-- TODO: 公開後に URL を差し替え -->
 ```bash
-git clone https://github.com/<user>/aws-ai-security-labs.git
+git clone https://github.com/suupimadev/aws-ai-security-labs.git
 cd aws-ai-security-labs
 ```
 
@@ -275,8 +273,7 @@ aws iam list-roles --query "Roles[?starts_with(RoleName,'lab01-bedrock-')].RoleN
 
 ## 14. GitHubコードへのリンク
 
-<!-- TODO: 公開後に差し替え（公開は事前承認） -->
-`https://github.com/<user>/aws-ai-security-labs`（`01-bedrock-iam/`）
+https://github.com/suupimadev/aws-ai-security-labs （`01-bedrock-iam/`）
 
 ## 参考
 
