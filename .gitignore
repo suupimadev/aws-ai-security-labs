@@ -29,3 +29,7 @@ docs/results/raw/
 # Qiita 記事の下書きはリポジトリに含めない（フォルダ構成だけ .gitkeep で残す）
 docs/articles/*
 !docs/articles/.gitkeep
+
+# 構成図の画像（記事用。リポジトリには含めない）
+docs/architecture/*.png
+docs/architecture/*.drawio
