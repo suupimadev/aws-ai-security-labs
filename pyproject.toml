@@ -1,0 +1,32 @@
+[project]
+name = "aws-ai-security-labs"
+version = "0.1.0"
+description = "Amazon Bedrock を中心とした AI セキュリティ検証ラボ"
+requires-python = ">=3.12"
+dependencies = ["boto3>=1.35"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+# 構成図の生成用（graphviz も必要: brew install graphviz）
+docs = ["diagrams>=0.23"]
+
+[tool.pytest.ini_options]
+# Lab ごとの src を import パスに追加（Lab 追加時はここに足す）
+pythonpath = ["01-bedrock-iam/src"]
+testpaths = ["01-bedrock-iam/tests"]
+# 実 AWS を叩く統合テストは既定で除外。明示的に `-m integration` を付けた時だけ実行する
+addopts = "-m 'not integration'"
+markers = [
+    "integration: 実 AWS 環境を使う統合テスト（課金・要承認）",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+# テストでは assert を使うため S101 を許可
+"**/tests/**" = ["S101"]

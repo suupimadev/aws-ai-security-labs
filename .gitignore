@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+
+# Terraform: state / 変数ファイル / 実行計画は機密を含みうるためコミットしない
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+tfplan
+crash.log
+# lock ファイルはコミットする（再現性のため）
+!.terraform.lock.hcl
+
+# 認証情報・環境変数
+.env
+.env.*
+*.pem
+.aws/
+
+# 実行結果の生データ（整形済みの docs/results/*.md のみ公開）
+docs/results/raw/
+.DS_Store
