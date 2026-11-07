@@ -2,7 +2,7 @@
 
 記事タイトル案: 「Amazon BedrockのIAMポリシーでモデル利用を制限してみた」
 
-> **ステータス: AWS 実環境で 8 シナリオ検証済み（2026-11-07）**。結果は [docs/results/lab01-bedrock-iam.md](../docs/results/lab01-bedrock-iam.md)、記事下書きは [docs/articles/lab01-bedrock-iam.md](../docs/articles/lab01-bedrock-iam.md)。ロールは検証後も残っており、`terraform destroy` は承認待ち。
+> **ステータス: AWS 実環境で 8 シナリオ検証済み（2026-11-07）**。結果は [docs/results/lab01-bedrock-iam.md](../docs/results/lab01-bedrock-iam.md)。検証用の IAM ロールは `terraform destroy` で削除済み。
 
 ## 目的
 IAM でモデル利用範囲を制御できることを、実 AWS で **許可・暗黙 Deny・明示 Deny** を比較して実証する。

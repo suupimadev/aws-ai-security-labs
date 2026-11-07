@@ -25,3 +25,7 @@ crash.log
 # 実行結果の生データ（整形済みの docs/results/*.md のみ公開）
 docs/results/raw/
 .DS_Store
+
+# Qiita 記事の下書きはリポジトリに含めない（フォルダ構成だけ .gitkeep で残す）
+docs/articles/*
+!docs/articles/.gitkeep
