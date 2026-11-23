@@ -12,8 +12,8 @@ docs = ["diagrams>=0.23"]
 
 [tool.pytest.ini_options]
 # Lab ごとの src を import パスに追加（Lab 追加時はここに足す）
-pythonpath = ["01-bedrock-iam/src"]
-testpaths = ["01-bedrock-iam/tests"]
+pythonpath = ["01-bedrock-iam/src", "02-bedrock-logging/src"]
+testpaths = ["01-bedrock-iam/tests", "02-bedrock-logging/tests"]
 # 実 AWS を叩く統合テストは既定で除外。明示的に `-m integration` を付けた時だけ実行する
 addopts = "-m 'not integration'"
 markers = [

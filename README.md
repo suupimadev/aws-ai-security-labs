@@ -7,7 +7,7 @@ Amazon Bedrock を中心とした AI セキュリティの技術検証リポジ�
 | Lab | テーマ | 状態 |
 |-----|--------|------|
 | [01](01-bedrock-iam/) | Bedrock IAM アクセス制御 | 実測完了・記事下書きあり（destroy・公開は承認待ち） |
-| [02](02-bedrock-logging/) | CloudTrail / CloudWatch による監査 | 計画のみ |
+| [02](02-bedrock-logging/) | CloudTrail / CloudWatch による監査 | 実測完了（destroy 済み） |
 | [03](03-guardrails-pii/) | Guardrails による PII 保護 | 計画のみ |
 | [04](04-prompt-injection/) | Prompt Injection 対策 | 計画のみ |
 | [05](05-rag-access-control/) | RAG の部署別アクセス制御 | 計画のみ |
